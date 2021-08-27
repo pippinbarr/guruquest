@@ -1,0 +1,387 @@
+initial: ...
+final: ...
+quit: bye
+quit: goodbye
+quit: quit
+pre: dont don't
+pre: cant can't
+pre: wont won't
+pre: recollect remember
+pre: dreamt dreamed
+pre: dreams dream
+pre: maybe perhaps
+pre: how what
+pre: when what
+pre: certainly yes
+pre: machine computer
+pre: computers computer
+pre: were was
+pre: you're you are
+pre: i'm i am
+pre: same alike
+post: am are
+post: your my
+post: me you
+post: myself yourself
+post: yourself myself
+post: i you
+post: you I
+post: my your
+post: i'm you are
+synon: belief feel think believe wish
+synon: family mother mom father dad sister brother wife children child
+synon: desire want need
+synon: sad unhappy depressed sick
+synon: happy elated glad better
+synon: cannot can't
+synon: everyone everybody nobody noone
+synon: be am is are was
+key: xnone
+  decomp: *
+    reasmb: This is the only world we have.
+    reasmb: You may continue.
+    reasmb: Go on.
+    reasmb: Speak.
+	reasmb: Recite.
+	reasmb: Do you hear the wind in the trees?
+	reasmb: Is it Autumn?
+	reasmb: Have you seen the moon today?
+	reasmb: Perhaps.
+	reasmb: A rabbit knows that it runs.
+	reasmb: A dog knows that it barks.
+	reasmb: A sleeper knows that he sleeps.
+	reasmb: Well?
+	reasmb: And?
+	reasmb: This.
+	reasmb: Endings.
+	reasmb: Beginnings.
+	reasmb: Are all things made of ash?
+	reasmb: Which direction are you looking from?
+key: sorry
+  decomp: *
+    reasmb: Better not speak than apologise.
+    reasmb: Let sorrow be your guru, then.
+    reasmb: When sorrow comes, the wise men sleep.
+key: apologise
+  decomp: *
+    reasmb: goto sorry
+key: help
+ decomp: *
+	reasmb: What does it really mean to help?
+	reasmb: Can we be helped, in the end?
+	reasmb: What is help?
+key: remember 5
+  decomp: * i remember *
+	reasmb: Best not to live in memory.
+    reasmb: You remember (2) .
+    reasmb: Memory is time spent in a mirror.
+    reasmb: Well?
+    reasmb: Be in this moment.
+    reasmb: Memory is to be extinguished.
+    reasmb: Why remember?
+  decomp: * do you remember *
+    reasmb: I have forgotten (2) .
+    reasmb: Why remember (2) ?
+    reasmb: Let go of (2) .
+    reasmb: goto what
+    reasmb: What of (2) ?
+key: if 3
+  decomp: * if *
+	reasmb: Yet the future never arrives.
+	reasmb: The future. Always coming. Never here.
+    reasmb: If (2) - then what?
+	reasmb: And then what?
+    reasmb: You wish that (2) ?
+    reasmb: What can one know about (2) ?
+key: dreamed 4
+  decomp: * i dreamed *
+    reasmb: (2) .
+	reasmb: You dreamed (2) . But are you now awake ?
+    reasmb: Which state is sleep ? Which state is wakefulness ?
+    reasmb: We dwell in dreams, rarely waking.
+    reasmb: goto dream
+key: dream 3
+  decomp: *
+    reasmb: Dreams are dreams.
+    reasmb: There are many dreams, few realities.
+    reasmb: Dream and end dreaming.
+    reasmb: Do not look into your dreams.
+key: perhaps
+  decomp: *
+    reasmb: Maybe yes, maybe no.
+    reasmb: The fish cannot see the change from stream to river.
+    reasmb: Knowing not, we do not need to know.
+    reasmb: Perhaps.
+    reasmb: Cruel men are certain, cruel men are uncertain.
+key: name 15
+  decomp: *
+    reasmb: I am not interested in names.
+    reasmb: There are no names.
+	reasmb: The name you can say is not the real name.
+key: deutsch
+  decomp: *
+    reasmb: goto xforeign
+    reasmb: Nein.
+key: francais
+  decomp: *
+    reasmb: goto xforeign
+    reasmb: Non.
+key: italiano
+  decomp: *
+    reasmb: goto xforeign
+    reasmb: Non.
+key: espanol
+  decomp: *
+    reasmb: goto xforeign
+    reasmb: No.
+key: xforeign
+  decomp: *
+    reasmb: Well.
+key: hello
+  decomp: *
+    reasmb: ...
+    reasmb: The dog and the fish do not eat together.
+	reasmb: Go back.
+	reasmb: Who do you speak to?
+	reasmb: So say the trees.
+	reasmb: So says the mountain.
+	reasmb: So says the valley.
+key: computer 50
+  decomp: *
+    reasmb: Let computers compute.
+    reasmb: Computers compute, answers elude.
+    reasmb: Your program has no answer.
+    reasmb: Well?
+    reasmb: We all compute, all malfunction, all spew incorrect answers.
+key: am
+  decomp: * am i *
+    reasmb: Are you (2) ?
+    reasmb: Thus, you are (2) .
+    reasmb: A foolish man would tell you that you are (2) ?
+    reasmb: A wise man would tell you that you are (2) ?
+	reasmb: Are you not (2) ?
+    reasmb: goto what
+  decomp: *
+    reasmb: Why?
+    reasmb: Not knowing.
+key: are
+  decomp: * are you *
+    reasmb: Who can say whether they are (2) or not?
+    reasmb: One time (2) another time not.
+    reasmb: Everyone is (2) , everyone is not (2) .
+    reasmb: The field mouse dreams it is (2) .
+    reasmb: goto what
+  decomp: * are *
+    reasmb: Could they be anything else?
+    reasmb: And if they were not (2) ?
+    reasmb: What if they were not (2) ?
+    reasmb: Being.
+key: your
+  decomp: * your *
+    reasmb: I do not own my (2) .
+    reasmb: How can one possess (2) ?
+    reasmb: You may have it.
+    reasmb: Holding (2) , losing ground.
+key: was 2
+  decomp: * was i *
+    reasmb: Did the field mouse dream it was (2) ?
+    reasmb: When were you not (2) ?
+    reasmb: How could you be (2) ?
+    reasmb: What is it to be (2) ?
+    reasmb: Thus.
+    reasmb: goto what
+  decomp: * i was *
+    reasmb: You are always (2) . You are never (2) .
+    reasmb: What is " (2) " in this life?
+    reasmb: Less knowing, less being.
+  decomp: * was you *
+    reasmb: The fox was (2) ?
+    reasmb: The swallow was (2) .
+    reasmb: The field mouse was (2) .
+key: i
+  decomp: * i @desire *
+    reasmb: Always wanting.
+    reasmb: Does the moon want (3) ?
+    reasmb: Does the sun want (3) ?
+    reasmb: Does the field mouse want (3) ?
+    reasmb: Speak!
+  decomp: * i am* @sad *
+    reasmb: Being (3) , the moon sets.
+    reasmb: Be (3) .
+    reasmb: All are (3) .
+    reasmb: Becoming (3) , living a life.
+  decomp: * i am* @happy *
+    reasmb: Being (3) , the moon sets.
+    reasmb: Be (3) .
+    reasmb: What is (3) ?
+    reasmb: Now (3) now not.
+    reasmb: Who is (3) ?
+  decomp: * i was *
+    reasmb: goto was
+  decomp: * i @belief * i *
+    reasmb: Belief is doubt.
+    reasmb: The belief is not the way.
+    reasmb: You must doubt you (3) .
+  decomp: * i* @belief *you *
+    reasmb: goto you
+  decomp: * i am *
+    reasmb: The field mouse is (2) .
+    reasmb: The moon is (2) .
+    reasmb: What is (2) ?
+    reasmb: How can you be (2) ?
+  decomp: * i @cannot *
+    reasmb: Even a stone can (3) .
+    reasmb: Do not try.
+    reasmb: Then try.
+    reasmb: Who can (3) ?
+  decomp: * i don't *
+    reasmb: Yet the cosmos does (2) ?
+    reasmb: The moon reflecting.
+    reasmb: Could anyone (2) ?
+    reasmb: Ripples in a pond.
+  decomp: * do i feel *
+    reasmb: Does anyone really feel (2) .
+    reasmb: Does the moon feel (2) ?
+    reasmb: A silhouette of branches against the moon.
+    reasmb: The field mouse is (2) .
+  decomp: * i * you *
+    reasmb: The field mice (2) the moon.
+    reasmb: The heavens (2) the earth.
+    reasmb: The clouds (2) the lightning.
+    reasmb: The beggar (2) the prince.
+  decomp: *
+    reasmb: Yes, (1) .
+    reasmb: The movement of a snake.
+    reasmb: A falling leaf.
+    reasmb: A churlish child.
+key: you
+  decomp: * you remind me of *
+    reasmb: goto alike
+  decomp: * you are *
+    reasmb: Be uncertain.
+    reasmb: Then I am (2) .
+    reasmb: No one can be (2) .
+    reasmb: Are you (2) ?
+  decomp: * you * me *
+    reasmb: Does the field mouse (2) the rain?
+    reasmb: Does the moon (2) the field?
+    reasmb: Can a raindrop (2) the sky?
+    reasmb: Would a frog (2) a tadpole?
+    reasmb: Can a window (2) a view?
+    reasmb: Not knowing.
+    reasmb: Not being.
+  decomp: * you *
+    reasmb: Being.
+    reasmb: Or rather, you (2) .
+    reasmb: We are the same.
+    reasmb: We are we.
+key: yes
+  decomp: *
+    reasmb: Be uncertain.
+    reasmb: Grasping certainty, losing life.
+    reasmb: Then speak.
+    reasmb: No.
+key: no
+  decomp: *
+    reasmb: Be uncertain.
+    reasmb: Tightly holding onto truth, losing grasp of life.
+    reasmb: Knowing not, not knowing.
+    reasmb: Yes.
+key: my 2
+  decomp: $ * my *
+    reasmb: You own your (2) ?
+    reasmb: Whose (2) ?
+    reasmb: My (2) . Your (2) . Everybody's (2) .
+    reasmb: Release your (2) .
+  decomp: * my * @family *
+    reasmb: Family is family.
+    reasmb: When the field mouse (4) , does the moon weep?
+    reasmb: Who is the moon's (3) ?
+    reasmb: Who is the sun's (3) ?
+  decomp: * my *
+    reasmb: Ah, possessions.
+    reasmb: Your (2) is my (2) is your (2) .
+    reasmb: More belongings, belonging less.
+    reasmb: My (2) .
+key: can
+  decomp: * can you *
+    reasmb: Can you (2) ?
+    reasmb: goto what
+    reasmb: Can the moon (2) ?
+    reasmb: Can a field mouse (2) ?
+  decomp: * can i *
+    reasmb: You cannot.
+    reasmb: You must.
+    reasmb: To (2) is to throw a pebble into the pond.
+    reasmb: goto what
+key: what
+  decomp: *
+    reasmb: Why ask?
+    reasmb: Why question?
+    reasmb: Why know?
+    reasmb: Ask the moon.
+    reasmb: Ask the field mouse.
+    reasmb: Ask the blind man.
+    reasmb: Ask the beggar.
+    reasmb: Ask your shadow.
+    reasmb: Why?
+key: because
+  decomp: *
+    reasmb: Are reasons reasons?
+    reasmb: Does the moon seek to explain?
+    reasmb: Does the field mouse list reasons?
+    reasmb: Are ripples in a pond explanations?
+key: why
+  decomp: * why don't you *
+    reasmb: Then I must (2) .
+    reasmb: The moon will (2) .
+    reasmb: Do I not (2) ?
+    reasmb: I (2) .
+    reasmb: goto what
+  decomp: * why can't i *
+    reasmb: Does the moon (2) ?
+    reasmb: Will the field mouse (2) ?
+    reasmb: Does a blind man (2) ?
+    reasmb: Ask yourself.
+    reasmb: goto what
+  decomp: *
+    reasmb: goto what
+key: everyone 2
+  decomp: * @everyone *
+    reasmb: Nobody (2) .
+    reasmb: Everyone (2) .
+    reasmb: Do the planets (2) ?
+    reasmb: Do the pond's ripples (2) ?
+    reasmb: Turn your face to the wind.
+    reasmb: Certainty is certainly not.
+    reasmb: All is not all.
+    reasmb: Who?
+    reasmb: When?
+key: everybody 2
+  decomp: *
+    reasmb: goto everyone
+key: nobody 2
+  decomp: *
+    reasmb: goto everyone
+key: noone 2
+  decomp: *
+    reasmb: goto everyone
+key: always 1
+  decomp: *
+    reasmb: Never.
+    reasmb: When?
+    reasmb: Why?
+    reasmb: Ask a shadow why.
+key: alike 10
+  decomp: *
+    reasmb: How can two raindrops be alike?
+    reasmb: How can two raindrops differ?
+    reasmb: All is all.
+    reasmb: Connections made, connections lost.
+    reasmb: Resemblance is deception.
+    reasmb: Why?
+    reasmb: Did the moon tell you that story?
+    reasmb: How?
+key: like 10
+  decomp: * @be *like *
+    reasmb: goto alike
