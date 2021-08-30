@@ -75,8 +75,8 @@ class Person {
     vertex(x, y - 20);
     vertex(x, y - 80);
     vertex(x - lineLength * this.charWidth / 2 - 5, y - 80);
-    vertex(x - lineLength * this.charWidth / 2 - 5, y - 80 - lines * this.lineHeight);
-    vertex(x + lineLength * this.charWidth / 2 + 5, y - 80 - lines * this.lineHeight);
+    vertex(x - lineLength * this.charWidth / 2 - 5, y - 80 - (lines + 1) * this.lineHeight);
+    vertex(x + lineLength * this.charWidth / 2 + 5, y - 80 - (lines + 1) * this.lineHeight);
     vertex(x + lineLength * this.charWidth / 2 + 5, y - 80);
     vertex(x + 5, y - 80);
     vertex(x, y - 20);
@@ -90,7 +90,7 @@ class Person {
     textSize(12);
     this.lineHeight = textAscent() + textDescent();
     textAlign(CENTER, TOP); // ???
-    text(str.toUpperCase(), x, y - 80 - (lines * this.lineHeight) + 2);
+    text(str.toUpperCase(), x, y - 80 - ((lines + 0.5) * this.lineHeight) + 2);
   }
 
 
