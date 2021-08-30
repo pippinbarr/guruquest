@@ -35,14 +35,27 @@ class Guru extends Person {
 
   */
   processInput(input) {
-    if (input !== `` ** this.w.inConversationRange()) {
+    if (input !== `` && this.w.inConversationRange()) {
       this.consulted = true;
       this.sayText = this.guru.transform(input);
       if (this.outGuruable) {
         // May need more fancy regex to check equivalence?
-        if (this.wouldSay.includes(input)) {
+        let found = false;
+        for (let i = 0; i < this.wouldSay.length; i++) {
+          let cleaner = /\s|\./gi;
+          let cleanInput = input.replace(cleaner, ``)
+            .toLowerCase();
+          let cleanWould = this.wouldSay[i].replace(cleaner, ``)
+            .toLowerCase();
+          if (cleanInput == cleanWould) {
+            found = true;
+            break;
+          }
+        }
+        if (found) {
           this.sayText = `Wise words.`;
           this.outGuruCount++;
+          console.log(this.outGuruCount);
           this.w.outGurued();
           if (this.outGuruCount === this.OUTGURU_MAX) {
             this.w.outGurued();
@@ -51,12 +64,13 @@ class Guru extends Person {
           this.outGuruable = false;
         }
       }
-      if (this.sayText === `Wise words.`) {
+      if (this.sayText !== `Wise words.`) {
         this.outGuruCount = 0;
       }
     } else {
       this.outGuruable = true;
     }
+
     for (let i = 0; i < this.wouldSay.length; i++) {
       this.wouldSay[i] = this.guruTest.transform(this.sayText);
     }

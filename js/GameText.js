@@ -30,6 +30,8 @@ class GameText
       rect(0.0, 0.0, width, height);
     }
 
+    noStroke();
+
     textFont(`Helvetica`);
 
     textAlign(3);

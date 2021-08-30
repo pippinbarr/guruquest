@@ -31,10 +31,11 @@ class Title
     }
 
     push();
-    textAlign(3);
+    textAlign(CENTER, BOTTOM);
     textFont(`sans-serif`);
     textSize(32)
 
+    noStroke();
     fill(this.titleFill, this.titleAlpha);
 
     let x = 0;

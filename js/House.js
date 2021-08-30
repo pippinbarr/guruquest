@@ -194,7 +194,7 @@ class House {
 
   inFront(param1Int) {
 
-    return (param1Int > this.w.getX(this.t) - this.HOME_WIDTH / 2 && param1Int < this.w.getX(this.t) + this.HOME_WIDTH / 2);
+    return (param1Int > this.w.getX(this.t) - this.HOME_WIDTH * 2 && param1Int < this.w.getX(this.t) + this.HOME_WIDTH * 2);
 
   }
 

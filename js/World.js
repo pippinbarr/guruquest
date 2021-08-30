@@ -7,7 +7,7 @@ class World {
 
   */
   constructor() {
-    this.guruStatusAchieved = false
+    this.guruStatusIsAchieved = false
     this.endGame = false;
     this.startGame = true;
     this.fadeToGame = false;
@@ -36,8 +36,8 @@ class World {
     this.endGameAlpha = 0;
     this.treeDelay = 0;
 
-    this.avatar = new Avatar(this, random(1500));
-    this.guru = new Guru(this, random(5000));
+    this.avatar = new Avatar(this, 1600);
+    this.guru = new Guru(this, 5000);
     this.clouds = new Clouds(this);
     this.house = new House(this, 1500);
     this.pagoda = new Pagoda(this, 5000);
@@ -116,7 +116,9 @@ AFTER YOUR QUEST`;
       } else if (!this.instructions.minAlpha()) {
         this.instructions.fadeOut();
       }
+
       this.guru.processInput(this.avatar.said());
+
     } else if (this.endGame) {
       this.clouds.tick();
       this.house.tick();
@@ -165,7 +167,7 @@ AFTER YOUR QUEST`;
       this.insightFlashAlpha = constrain(this.insightFlashAlpha - 30, 0, 255);
     }
 
-    if (!this.guruStatusAchieved) {
+    if (!this.guruStatusIsAchieved) {
       this.guru.display();
     }
 
@@ -178,7 +180,7 @@ AFTER YOUR QUEST`;
 
 
   guruStatusAchieved() {
-    this.guruStatusAchieved = true;
+    this.guruStatusIsAchieved = true;
     this.avatar.becomeGuru(this.guru.getT());
     this.endTheGame();
   }
@@ -192,7 +194,7 @@ AFTER YOUR QUEST`;
   }
 
   guruStatusAchieved() {
-    this.guruStatusAchieved = true;
+    this.guruStatusIsAchieved = true;
     this.avatar.becomeGuru(this.guru.getT());
     this.endTheGame();
   }
@@ -252,6 +254,7 @@ AFTER YOUR QUEST`;
 
 
   keyPressed() {
+    this.avatar.keyPressed();
     if (keyCode == 40 && this.avatar.atHome && this.preGame) {
       this.avatar.atHome = false;
       this.house.avatarLeft();

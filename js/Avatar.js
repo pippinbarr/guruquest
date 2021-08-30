@@ -11,7 +11,7 @@ class Avatar extends Person {
     this.meditating = false;
     this.walking = false;
     this.atHome = true;
-    this.guruStatus = false;
+    this.hasGuruStatus = false;
     this.h = 5;
   }
 
@@ -26,7 +26,7 @@ class Avatar extends Person {
     push();
     stroke(this.avatarColour);
 
-    if (!this.meditating && !this.guruStatus) {
+    if (!this.meditating && !this.hasGuruStatus) {
       if (!this.walking) {
         line(i, (j - 2), i, (j - this.h));
         line((i - 1), j, (i - 1), (j - 1));
@@ -46,7 +46,7 @@ class Avatar extends Person {
           this.walkCyclePosition = 1 - this.walkCyclePosition;
         }
       }
-    } else if (this.guruStatus) {
+    } else if (this.hasGuruStatus) {
       i = this.w.getX(this.t);
       j = this.w.getY(this.t) - 10;
       stroke(255.0, 0.0, 0.0);
@@ -63,23 +63,24 @@ class Avatar extends Person {
 
   becomeGuru(param1Int) {
     this.t = param1Int;
-    this.guruStatus = true;
+    this.hasGuruStatus = true;
     this.avatarColour = color(255, 0, 0);
   }
 
 
   guruStatus() {
-    return this.guruStatus;
+    return this.hasGuruStatus;
   }
 
   keyPressed() {
-
+    if (!this.atHome && !this.meditating && !this.hasGuruStatus) {
+      this.handleSpeechInput();
+    }
   }
 
   handleInput() {
-    if (!this.atHome && !this.meditating && !this.guruStatus) {
+    if (!this.atHome && !this.meditating && !this.hasGuruStatus) {
       this.handleMovementInput();
-      this.handleSpeechInput();
     }
   }
 
@@ -91,10 +92,11 @@ class Avatar extends Person {
       this.t += 10;
       this.w.avatarMoved(this.t, 10);
     }
+
   }
 
   handleSpeechInput() {
-    if (keyCode == 10) {
+    if (keyCode == ENTER) {
       this.saidText = this.sayText;
       this.sayText = "";
       this.sayTextLines = 1;

@@ -19,7 +19,7 @@ class Pagoda
     let j = this.w.getY(this.t);
 
     push();
-    rectMode(3);
+    rectMode(CENTER);
 
     for (let b = 0; b < this.tiers; b++) {
 
