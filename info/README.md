@@ -2,7 +2,7 @@
 
 ![Banner](images/guruquest-banner.png)
 
-## [Play Online](https://pippinbarr.github.io/guruquest/) (HTML5, Desktop only)
+## [Play Online](https://www.pippinbarr.com/guruquest/) (HTML5, Desktop only)
 
 ## Description
 *A game to solve all your life's problems with! Consult the guru on any matter your heart desires and let him bestow wisdom upon you! Relive the Golden Age of text adventures! Beat the guru at his own game! So to speak!*
@@ -13,7 +13,7 @@ However, times change and the applications for MacOS, Windows, and Linux back th
 
 ## Documentation
 * [Code repository](https://www.github.com/pippinbarr/guruquest/) including the new (JavaScript) and old (Java) source code
-* [Journal](/process/journal.md) (blog posts written while I was making the original *GuruQuest*)
+* [Journal](../process/journal.md) (blog posts written while I was making the original *GuruQuest*)
 
 ## License
 *GuruQuest* is an open source game licensed under a [Creative Commons Attribution-NonCommercial 3.0 Unported License](http://creativecommons.org/licenses/by-nc/3.0/). You can obtain the source code from its [code repository](https://github.com/pippinbarr/guruquest/) on GitHub.
